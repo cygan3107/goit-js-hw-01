@@ -1,6 +1,7 @@
 "use strict";
 function getShippingMessage(country, price, deliveryFee) {
-    console.log(`Shipping ${country} will cost ${price * deliveryFee} credits`);
+    const totalPrice = price + deliveryFee;
+    console.log(`Shipping ${country} will cost ${totalPrice} credits`);
 }
 getShippingMessage("Australia", 120, 50); // "Shipping to Australia will cost 170 credits"
 getShippingMessage("Germany", 80, 20); // "Shipping to Germany will cost 100 credits"
